@@ -1,0 +1,21 @@
+{
+  "id": "./",
+  "name": "Setcount — Train with intent",
+  "short_name": "Setcount",
+  "description": "A focused workout tracker for sets, strength, and progress.",
+  "lang": "en",
+  "dir": "auto",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#d7dad8",
+  "theme_color": "#1f56c4",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
