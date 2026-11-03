@@ -427,3 +427,48 @@ nav svg{width:22px;height:22px}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
 }
+
+/* Forge Fitness — collapsible sidebar (tablet / desktop) */
+:root{--sbwd:0px;--sbw:0px}
+#side{display:none}
+@media(min-width:768px){
+  :root{--sbwd:264px;--sbw:calc(var(--sbwd) + 32px)}
+  :root.sb-collapsed{--sbwd:76px}
+  nav{display:none}
+  body{padding-left:calc(var(--sbw) + 16px);padding-right:24px}
+  #app{padding-bottom:40px}
+  .startbar{left:var(--sbw);bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+  .toast{bottom:28px}
+  #side{display:flex;flex-direction:column;position:fixed;z-index:6;left:16px;top:16px;bottom:16px;width:var(--sbwd);
+    background:linear-gradient(180deg,#0f1612,#0b100d);border:1px solid var(--line);border-radius:24px;padding:18px 12px 14px;
+    box-shadow:0 18px 50px rgba(0,0,0,.45);transition:width .25s ease}
+  .sb-tog{position:absolute;right:-14px;top:26px;width:28px;height:28px;border-radius:50%;background:var(--panel-2);border:1px solid var(--line);color:var(--muted);display:grid;place-items:center;z-index:2}
+  .sb-tog:hover{color:var(--blue);border-color:var(--blue)}
+  .sb-tog svg{transition:transform .25s ease}
+  :root.sb-collapsed .sb-tog svg{transform:rotate(180deg)}
+  .sb-head{display:flex;align-items:center;gap:12px;padding:0 4px 18px;min-height:56px;overflow:hidden}
+  .sb-logo{width:40px;height:40px;flex:none;border-radius:50%;background:#10150f;border:1px solid var(--line);color:var(--blue);display:grid;place-items:center;box-shadow:0 0 18px rgba(197,243,106,.18)}
+  .sb-name{font-family:var(--font-display);font-size:22px;font-weight:800;letter-spacing:.01em;white-space:nowrap}
+  .sb-cap{font-size:11px;color:var(--muted);padding:6px 10px;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+  .sb-list{display:flex;flex-direction:column;gap:4px;flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;padding-top:4px}
+  .sb-item{position:relative;display:flex;align-items:center;gap:14px;height:48px;padding:0 13px;border-radius:12px;color:var(--muted);font-weight:600;font-size:14px;text-align:left;white-space:nowrap;transition:background .2s,color .2s}
+  .sb-item svg{width:22px;height:22px;flex:none}
+  .sb-item:hover{background:rgba(255,255,255,.05);color:var(--ink)}
+  .sb-item.on{color:var(--ink);background:linear-gradient(90deg,rgba(197,243,106,.17),rgba(197,243,106,0) 78%)}
+  .sb-item.on svg{color:var(--blue)}
+  .sb-item.on::before{content:"";position:absolute;left:-12px;top:12px;bottom:12px;width:3px;border-radius:0 3px 3px 0;background:var(--blue);box-shadow:0 0 14px 2px rgba(197,243,106,.65)}
+  .sb-badge{margin-left:auto;font-style:normal;font-size:11px;font-weight:800;min-width:22px;height:22px;padding:0 6px;border-radius:11px;background:var(--blue);color:#10150f;display:grid;place-items:center}
+  .sb-foot{display:flex;align-items:center;gap:12px;padding:10px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line);text-align:left;overflow:hidden;white-space:nowrap;margin-top:10px}
+  .sb-foot:hover{border-color:rgba(197,243,106,.4)}
+  .sb-foot b{display:block;font-size:13px}.sb-foot small{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+  .sb-ring{position:relative;flex:none;width:40px;height:40px;display:grid;place-items:center}
+  .sb-ring svg{position:absolute;inset:0}
+  .sb-ring .num{font-size:11px;font-weight:700;position:relative}
+  :root.sb-collapsed .sb-label-t,:root.sb-collapsed .sb-name{display:none}
+  :root.sb-collapsed .sb-item{justify-content:center;padding:0}
+  :root.sb-collapsed .sb-badge{position:absolute;top:5px;right:6px;min-width:16px;height:16px;font-size:9px;padding:0 4px}
+  :root.sb-collapsed .sb-head{justify-content:center;padding:0 0 18px}
+  :root.sb-collapsed .sb-foot{justify-content:center;padding:8px 0;background:transparent;border-color:transparent}
+  :root.sb-collapsed .sb-item.on::before{left:-12px}
+}
+@media(min-width:768px) and (prefers-reduced-motion:reduce){#side,.sb-tog svg{transition:none}}
