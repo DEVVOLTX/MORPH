@@ -45,106 +45,106 @@ var RAW=[
 ['Russian Twist','Abs','Bodyweight',0,2.5,0,20,3],['Cable Side Crunch','Abs','Cable',0,2.5,20,12,3],['Cable Kneeling Crunch','Abs','Cable',0,2.5,30,15,3],
 ['Lever Pec Deck Fly','Chest','Machine',0,2.5,40,12,3],['Dumbbell One Arm Bent over Row','Back','Dumbbell',0,2,24,10,3],['Cable Seated One Arm Alternate Row','Back','Cable',0,2.5,20,10,3]
 ];
-var IMG={'Dumbbell Squeeze Bench Press':{a:'assets/images/9d82a9c61539.jpg',m:'assets/images/497b36104381.jpg'},
-'Hammer Curl 2':{a:'assets/images/50474f1d0996.jpg',m:'assets/images/cd660529568b.jpg'},
-'Deadlift':{a:'assets/images/312b835c598f.jpg',m:'assets/images/ef0de3fb33b5.jpg'},
-'Dumbbell Incline Hammer Curl':{a:'assets/images/9cb8bc3ec52f.jpg',m:'assets/images/9106b889e541.jpg'},
-'Cable Rope Hammer Preacher Curl':{a:'assets/images/28856803036f.jpg',m:'assets/images/642e9a1bc702.jpg'},
-'Seated Hammer Curl':{a:'assets/images/db5b0e31da92.jpg',m:'assets/images/5880433e0393.jpg'},
-'Hammer Curl':{a:'assets/images/f1cebe0e4626.jpg',m:'assets/images/9106b889e541.jpg'},
-'Barbell Palms Down Wrist Curl Over A Bench':{a:'assets/images/10b8307931a0.jpg',m:'assets/images/44bb055401a4.jpg'},
-'EZ Barbell Preacher Curl':{a:'assets/images/d3726eab12d0.jpg',m:'assets/images/f5decdbdf47f.jpg'},
-'EZ Barbell Spider Curl':{a:'assets/images/2b0d0c574434.jpg',m:'assets/images/9106b889e541.jpg'},
-'Cable Lying Face Pull':{a:'assets/images/a1d4a7fb0632.jpg',m:'assets/images/c689a757dc56.jpg'},
-'Barbell Curl':{a:'assets/images/6503ba28c870.jpg',m:'assets/images/9106b889e541.jpg'},
-'Dumbbell Squat to Overhead Press':{a:'assets/images/93c39b9a08ce.jpg',m:'assets/images/e6aee1ca094d.jpg'},
-'Weighted Plate Standing Overhead Press':{a:'assets/images/dd32da801dc6.jpg',m:'assets/images/66d542f83a17.jpg'},
-'Barbell Seated Overhead Press':{a:'assets/images/a61479732b4f.jpg',m:'assets/images/e7238b7e4937.jpg'},
-'Barbell Narrow Stance Squat':{a:'assets/images/f577bd823766.jpg',m:'assets/images/f763f83ddb62.jpg'},
-'Barbell One Arm Bent over Row':{a:'assets/images/1b5d8af5ed0c.jpg',m:'assets/images/da312b7249aa.jpg'},
-'Barbell Lying Row on Rack':{a:'assets/images/5372fa7006ea.jpg',m:'assets/images/4b361ea93f09.jpg'},
-'Barbell Bent Over Wide Grip Row':{a:'assets/images/d0801cf04a08.jpg',m:'assets/images/4b361ea93f09.jpg'},
-'Incline Bench Press':{a:'assets/images/6ad1512676af.jpg',m:'assets/images/103e692d04e3.jpg'},
-'Arms Overhead Full Sit-up':{a:'assets/images/790cae81dff2.jpg',m:'assets/images/ba9a8144175e.jpg'},
-'Dumbbell Split Stance Single Arm Overhead Press':{a:'assets/images/3c705d7b791c.jpg',m:'assets/images/d9154cd18b49.jpg'},
-'Dumbbell Alternate Vertical Raise':{a:'assets/images/f381f7d6bbcd.jpg',m:'assets/images/3d6d07e34217.jpg'},
-'Dumbbell Front Raise':{a:'assets/images/e7c12a9cba39.jpg',m:'assets/images/3d6d07e34217.jpg'},
-'Cable Front Raise':{a:'assets/images/e40bdcb10de2.jpg',m:'assets/images/3d6d07e34217.jpg'},
-'Arnold Press':{a:'assets/images/b407754f0772.jpg',m:'assets/images/d818809e6189.jpg'},
-'Smith Seated Shoulder Press':{a:'assets/images/4967dec67525.jpg',m:'assets/images/5dc372233371.jpg'},
-'Dumbbell Standing Overhead Press':{a:'assets/images/1e65e8dbfc89.jpg',m:'assets/images/262595e9bc03.jpg'},
-'Overhead Triceps Extension':{a:'assets/images/b8e9b86668af.jpg',m:'assets/images/3eaf0f261059.jpg'},
-'Cable One Arm Lateral Raise':{a:'assets/images/41bd3faa51cf.jpg',m:'assets/images/b6875a050c4c.jpg'},
-'Bench Press':{a:'assets/images/62851cdb34ea.jpg',m:'assets/images/f2cc49ade462.jpg'},
-'Cable Fly':{a:'assets/images/8f098a4a2330.jpg',m:'assets/images/852dfde9dd0b.jpg'},
-'Lever Chest Press (Plates)':{a:'assets/images/65a29afed979.jpg',m:'assets/images/5f2af2a449bd.jpg'},
-'Dips':{a:'assets/images/6e357d0f681d.jpg',m:'assets/images/d8453d63247c.jpg'},
-'Lever Chest Press':{a:'assets/images/2475c9fdb5f9.jpg',m:'assets/images/f2cc49ade462.jpg'},
-'Lever Lying Chest Press':{a:'assets/images/dcfa278708a2.jpg',m:'assets/images/f2cc49ade462.jpg'},
-'Dumbbell Shoulder Press':{a:'assets/images/d8ea252f85bf.jpg',m:'assets/images/5dc372233371.jpg'},
-'Incline Dumbbell Press':{a:'assets/images/2685948c86d0.jpg',m:'assets/images/4b14eabf6576.jpg'},
-'Triceps Pushdown':{a:'assets/images/e5231fa3ce2d.jpg',m:'assets/images/3eaf0f261059.jpg'},
-'Lateral Raise':{a:'assets/images/a783c4f7b779.jpg',m:'assets/images/cc764e669394.jpg'}};
-IMG['Romanian Deadlift']=({'Romanian Deadlift':{a:'assets/images/0edc692b6ebb.jpg',m:'assets/images/35ebcbea7d7a.jpg'}})['Romanian Deadlift'];
-IMG['Sled 45° Leg Wide Press']=({'Sled 45° Leg Wide Press':{a:'assets/images/bf61cd4eab57.jpg',m:'assets/images/8ff298e604f2.jpg'}})['Sled 45° Leg Wide Press'];
-IMG['Sled 45° Leg Press']=({'Sled 45° Leg Press':{a:'assets/images/7b3101aca126.jpg',m:'assets/images/487688fadbdf.jpg'}})['Sled 45° Leg Press'];
-IMG['Lever Seated Leg Press']=({'Lever Seated Leg Press':{a:'assets/images/d50af03045dc.jpg',m:'assets/images/487688fadbdf.jpg'}})['Lever Seated Leg Press'];
-IMG['Lever Seated Leg Press 2']=({'Lever Seated Leg Press 2':{a:'assets/images/784b1b815c57.jpg',m:'assets/images/487688fadbdf.jpg'}})['Lever Seated Leg Press 2'];
-IMG['Dumbbell Military Press Russian Twist']=({'Dumbbell Military Press Russian Twist':{a:'assets/images/e0a798536e75.jpg',m:'assets/images/ec8570adfdbb.jpg'}})['Dumbbell Military Press Russian Twist'];
-IMG['Dumbbell Seated Military Press In Out']=({'Dumbbell Seated Military Press In Out':{a:'assets/images/18726f7176ba.jpg',m:'assets/images/f50c16a7d0c2.jpg'}})['Dumbbell Seated Military Press In Out'];
+var IMG={'Dumbbell Squeeze Bench Press':{a:'assets/9d82a9c61539.jpg',m:'assets/497b36104381.jpg'},
+'Hammer Curl 2':{a:'assets/50474f1d0996.jpg',m:'assets/cd660529568b.jpg'},
+'Deadlift':{a:'assets/312b835c598f.jpg',m:'assets/ef0de3fb33b5.jpg'},
+'Dumbbell Incline Hammer Curl':{a:'assets/9cb8bc3ec52f.jpg',m:'assets/9106b889e541.jpg'},
+'Cable Rope Hammer Preacher Curl':{a:'assets/28856803036f.jpg',m:'assets/642e9a1bc702.jpg'},
+'Seated Hammer Curl':{a:'assets/db5b0e31da92.jpg',m:'assets/5880433e0393.jpg'},
+'Hammer Curl':{a:'assets/f1cebe0e4626.jpg',m:'assets/9106b889e541.jpg'},
+'Barbell Palms Down Wrist Curl Over A Bench':{a:'assets/10b8307931a0.jpg',m:'assets/44bb055401a4.jpg'},
+'EZ Barbell Preacher Curl':{a:'assets/d3726eab12d0.jpg',m:'assets/f5decdbdf47f.jpg'},
+'EZ Barbell Spider Curl':{a:'assets/2b0d0c574434.jpg',m:'assets/9106b889e541.jpg'},
+'Cable Lying Face Pull':{a:'assets/a1d4a7fb0632.jpg',m:'assets/c689a757dc56.jpg'},
+'Barbell Curl':{a:'assets/6503ba28c870.jpg',m:'assets/9106b889e541.jpg'},
+'Dumbbell Squat to Overhead Press':{a:'assets/93c39b9a08ce.jpg',m:'assets/e6aee1ca094d.jpg'},
+'Weighted Plate Standing Overhead Press':{a:'assets/dd32da801dc6.jpg',m:'assets/66d542f83a17.jpg'},
+'Barbell Seated Overhead Press':{a:'assets/a61479732b4f.jpg',m:'assets/e7238b7e4937.jpg'},
+'Barbell Narrow Stance Squat':{a:'assets/f577bd823766.jpg',m:'assets/f763f83ddb62.jpg'},
+'Barbell One Arm Bent over Row':{a:'assets/1b5d8af5ed0c.jpg',m:'assets/da312b7249aa.jpg'},
+'Barbell Lying Row on Rack':{a:'assets/5372fa7006ea.jpg',m:'assets/4b361ea93f09.jpg'},
+'Barbell Bent Over Wide Grip Row':{a:'assets/d0801cf04a08.jpg',m:'assets/4b361ea93f09.jpg'},
+'Incline Bench Press':{a:'assets/6ad1512676af.jpg',m:'assets/103e692d04e3.jpg'},
+'Arms Overhead Full Sit-up':{a:'assets/790cae81dff2.jpg',m:'assets/ba9a8144175e.jpg'},
+'Dumbbell Split Stance Single Arm Overhead Press':{a:'assets/3c705d7b791c.jpg',m:'assets/d9154cd18b49.jpg'},
+'Dumbbell Alternate Vertical Raise':{a:'assets/f381f7d6bbcd.jpg',m:'assets/3d6d07e34217.jpg'},
+'Dumbbell Front Raise':{a:'assets/e7c12a9cba39.jpg',m:'assets/3d6d07e34217.jpg'},
+'Cable Front Raise':{a:'assets/e40bdcb10de2.jpg',m:'assets/3d6d07e34217.jpg'},
+'Arnold Press':{a:'assets/b407754f0772.jpg',m:'assets/d818809e6189.jpg'},
+'Smith Seated Shoulder Press':{a:'assets/4967dec67525.jpg',m:'assets/5dc372233371.jpg'},
+'Dumbbell Standing Overhead Press':{a:'assets/1e65e8dbfc89.jpg',m:'assets/262595e9bc03.jpg'},
+'Overhead Triceps Extension':{a:'assets/b8e9b86668af.jpg',m:'assets/3eaf0f261059.jpg'},
+'Cable One Arm Lateral Raise':{a:'assets/41bd3faa51cf.jpg',m:'assets/b6875a050c4c.jpg'},
+'Bench Press':{a:'assets/62851cdb34ea.jpg',m:'assets/f2cc49ade462.jpg'},
+'Cable Fly':{a:'assets/8f098a4a2330.jpg',m:'assets/852dfde9dd0b.jpg'},
+'Lever Chest Press (Plates)':{a:'assets/65a29afed979.jpg',m:'assets/5f2af2a449bd.jpg'},
+'Dips':{a:'assets/6e357d0f681d.jpg',m:'assets/d8453d63247c.jpg'},
+'Lever Chest Press':{a:'assets/2475c9fdb5f9.jpg',m:'assets/f2cc49ade462.jpg'},
+'Lever Lying Chest Press':{a:'assets/dcfa278708a2.jpg',m:'assets/f2cc49ade462.jpg'},
+'Dumbbell Shoulder Press':{a:'assets/d8ea252f85bf.jpg',m:'assets/5dc372233371.jpg'},
+'Incline Dumbbell Press':{a:'assets/2685948c86d0.jpg',m:'assets/4b14eabf6576.jpg'},
+'Triceps Pushdown':{a:'assets/e5231fa3ce2d.jpg',m:'assets/3eaf0f261059.jpg'},
+'Lateral Raise':{a:'assets/a783c4f7b779.jpg',m:'assets/cc764e669394.jpg'}};
+IMG['Romanian Deadlift']=({'Romanian Deadlift':{a:'assets/0edc692b6ebb.jpg',m:'assets/35ebcbea7d7a.jpg'}})['Romanian Deadlift'];
+IMG['Sled 45° Leg Wide Press']=({'Sled 45° Leg Wide Press':{a:'assets/bf61cd4eab57.jpg',m:'assets/8ff298e604f2.jpg'}})['Sled 45° Leg Wide Press'];
+IMG['Sled 45° Leg Press']=({'Sled 45° Leg Press':{a:'assets/7b3101aca126.jpg',m:'assets/487688fadbdf.jpg'}})['Sled 45° Leg Press'];
+IMG['Lever Seated Leg Press']=({'Lever Seated Leg Press':{a:'assets/d50af03045dc.jpg',m:'assets/487688fadbdf.jpg'}})['Lever Seated Leg Press'];
+IMG['Lever Seated Leg Press 2']=({'Lever Seated Leg Press 2':{a:'assets/784b1b815c57.jpg',m:'assets/487688fadbdf.jpg'}})['Lever Seated Leg Press 2'];
+IMG['Dumbbell Military Press Russian Twist']=({'Dumbbell Military Press Russian Twist':{a:'assets/e0a798536e75.jpg',m:'assets/ec8570adfdbb.jpg'}})['Dumbbell Military Press Russian Twist'];
+IMG['Dumbbell Seated Military Press In Out']=({'Dumbbell Seated Military Press In Out':{a:'assets/18726f7176ba.jpg',m:'assets/f50c16a7d0c2.jpg'}})['Dumbbell Seated Military Press In Out'];
 IMG['Leg Press']=IMG['Sled 45° Leg Press'];
-IMG['Standing Calf Raise']=({'Standing Calf Raise':{a:'assets/images/d881d6e6a335.jpg',m:'assets/images/613e29e6d6d3.jpg'}})['Standing Calf Raise'];
-IMG['Standing Leg Calf Raise']=({'Standing Leg Calf Raise':{a:'assets/images/a432bc5d8936.jpg',m:'assets/images/613e29e6d6d3.jpg'}})['Standing Leg Calf Raise'];
-IMG['Hanging Leg Raise']=({'Hanging Leg Raise':{a:'assets/images/1e0b531915b7.jpg',m:'assets/images/c9de10d52fd1.jpg'}})['Hanging Leg Raise'];
-IMG['Hanging Leg Hip Raise']=({'Hanging Leg Hip Raise':{a:'assets/images/5e1bb22eda44.jpg',m:'assets/images/1382b435d375.jpg'}})['Hanging Leg Hip Raise'];
-IMG['Side Plank Hip Adduction']=({'Side Plank Hip Adduction':{a:'assets/images/02be3783ab24.jpg',m:'assets/images/c3316344d018.jpg'}})['Side Plank Hip Adduction'];
-IMG['Reverse plank']=({'Reverse plank':{a:'assets/images/3b9b56b41058.jpg',m:'assets/images/9546dcd75cfd.jpg'}})['Reverse plank'];
-IMG['Side Plank']=({'Side Plank':{a:'assets/images/a956ada5c945.jpg',m:'assets/images/170c622e8c6e.jpg'}})['Side Plank'];
-IMG['Front Plank']=({'Front Plank':{a:'assets/images/c7220d211a98.jpg',m:'assets/images/d7b1aa3530bb.jpg'}})['Front Plank'];
-IMG['Push-up']=({'Push-up':{a:'assets/images/b0f7df528b7d.jpg',m:'assets/images/20a2c64b2953.jpg'}})['Push-up'];
-IMG['Leg Extension Plank']=({'Leg Extension Plank':{a:'assets/images/9033b65ca10a.jpg',m:'assets/images/a19543a7b324.jpg'}})['Leg Extension Plank'];
-IMG['Walking on Treadmill']=({'Walking on Treadmill':{a:'assets/images/2dc4743bfc4e.jpg',m:'assets/images/df80e71df10c.jpg'}})['Walking on Treadmill'];
-IMG['One arm Wrist Curl']=({'One arm Wrist Curl':{a:'assets/images/b0b538c7a4e9.jpg',m:'assets/images/375301ef3284.jpg'}})['One arm Wrist Curl'];
-IMG['Wrist Curl']=({'Wrist Curl':{a:'assets/images/0a0d12d759f2.jpg',m:'assets/images/375301ef3284.jpg'}})['Wrist Curl'];
-IMG['Stationary Bike Run']=({'Stationary Bike Run':{a:'assets/images/96696f4df48d.jpg',m:'assets/images/30724d44f028.jpg'}})['Stationary Bike Run'];
-IMG['Rowing']=({'Rowing':{a:'assets/images/b67c6c378456.jpg',m:'assets/images/a64e4fd98797.jpg'}})['Rowing'];
-IMG['Reverse Barbell Curl']=({'Reverse Barbell Curl':{a:'assets/images/f8de761a7671.jpg',m:'assets/images/1877e9d816ff.jpg'}})['Reverse Barbell Curl'];
-IMG['Russian Twist']=({'Russian Twist':{a:'assets/images/d2df36b371c4.jpg',m:'assets/images/1ecacde66766.jpg'}})['Russian Twist'];
-IMG['Cable Side Crunch']=({'Cable Side Crunch':{a:'assets/images/7c68f46b7ab2.jpg',m:'assets/images/170c622e8c6e.jpg'}})['Cable Side Crunch'];
-IMG['Cable Kneeling Crunch']=({'Cable Kneeling Crunch':{a:'assets/images/766bdf3d0b14.jpg',m:'assets/images/c9de10d52fd1.jpg'}})['Cable Kneeling Crunch'];
-IMG['Hip Thrust']=({'Hip Thrust':{a:'assets/images/cca345b0acae.jpg',m:'assets/images/5f1bce48f8f8.jpg'}})['Hip Thrust'];
-IMG['Bulgarian Split Squat']=({'Bulgarian Split Squat':{a:'assets/images/db35c8114875.jpg',m:'assets/images/487688fadbdf.jpg'}})['Bulgarian Split Squat'];
-IMG['Front Squat']=({'Front Squat':{a:'assets/images/dc1b22112cd6.jpg',m:'assets/images/487688fadbdf.jpg'}})['Front Squat'];
-IMG['Lever Pec Deck Fly']=({'Lever Pec Deck Fly':{a:'assets/images/2c3c0c324147.jpg',m:'assets/images/3006c4cfd295.jpg'}})['Lever Pec Deck Fly'];
-IMG['Pull-up']=({'Pull-up':{a:'assets/images/bd5d4033e6ad.jpg',m:'assets/images/a0c80d2194ba.jpg'}})['Pull-up'];
-IMG['Dumbbell One Arm Bent over Row']=({'Dumbbell One Arm Bent over Row':{a:'assets/images/2aa6eb2b0a50.jpg',m:'assets/images/250adaf42af5.jpg'}})['Dumbbell One Arm Bent over Row'];
-IMG['Cable Seated One Arm Alternate Row']=({'Cable Seated One Arm Alternate Row':{a:'assets/images/ac4ed32b8b8e.jpg',m:'assets/images/4a73ecb223a9.jpg'}})['Cable Seated One Arm Alternate Row'];
+IMG['Standing Calf Raise']=({'Standing Calf Raise':{a:'assets/d881d6e6a335.jpg',m:'assets/613e29e6d6d3.jpg'}})['Standing Calf Raise'];
+IMG['Standing Leg Calf Raise']=({'Standing Leg Calf Raise':{a:'assets/a432bc5d8936.jpg',m:'assets/613e29e6d6d3.jpg'}})['Standing Leg Calf Raise'];
+IMG['Hanging Leg Raise']=({'Hanging Leg Raise':{a:'assets/1e0b531915b7.jpg',m:'assets/c9de10d52fd1.jpg'}})['Hanging Leg Raise'];
+IMG['Hanging Leg Hip Raise']=({'Hanging Leg Hip Raise':{a:'assets/5e1bb22eda44.jpg',m:'assets/1382b435d375.jpg'}})['Hanging Leg Hip Raise'];
+IMG['Side Plank Hip Adduction']=({'Side Plank Hip Adduction':{a:'assets/02be3783ab24.jpg',m:'assets/c3316344d018.jpg'}})['Side Plank Hip Adduction'];
+IMG['Reverse plank']=({'Reverse plank':{a:'assets/3b9b56b41058.jpg',m:'assets/9546dcd75cfd.jpg'}})['Reverse plank'];
+IMG['Side Plank']=({'Side Plank':{a:'assets/a956ada5c945.jpg',m:'assets/170c622e8c6e.jpg'}})['Side Plank'];
+IMG['Front Plank']=({'Front Plank':{a:'assets/c7220d211a98.jpg',m:'assets/d7b1aa3530bb.jpg'}})['Front Plank'];
+IMG['Push-up']=({'Push-up':{a:'assets/b0f7df528b7d.jpg',m:'assets/20a2c64b2953.jpg'}})['Push-up'];
+IMG['Leg Extension Plank']=({'Leg Extension Plank':{a:'assets/9033b65ca10a.jpg',m:'assets/a19543a7b324.jpg'}})['Leg Extension Plank'];
+IMG['Walking on Treadmill']=({'Walking on Treadmill':{a:'assets/2dc4743bfc4e.jpg',m:'assets/df80e71df10c.jpg'}})['Walking on Treadmill'];
+IMG['One arm Wrist Curl']=({'One arm Wrist Curl':{a:'assets/b0b538c7a4e9.jpg',m:'assets/375301ef3284.jpg'}})['One arm Wrist Curl'];
+IMG['Wrist Curl']=({'Wrist Curl':{a:'assets/0a0d12d759f2.jpg',m:'assets/375301ef3284.jpg'}})['Wrist Curl'];
+IMG['Stationary Bike Run']=({'Stationary Bike Run':{a:'assets/96696f4df48d.jpg',m:'assets/30724d44f028.jpg'}})['Stationary Bike Run'];
+IMG['Rowing']=({'Rowing':{a:'assets/b67c6c378456.jpg',m:'assets/a64e4fd98797.jpg'}})['Rowing'];
+IMG['Reverse Barbell Curl']=({'Reverse Barbell Curl':{a:'assets/f8de761a7671.jpg',m:'assets/1877e9d816ff.jpg'}})['Reverse Barbell Curl'];
+IMG['Russian Twist']=({'Russian Twist':{a:'assets/d2df36b371c4.jpg',m:'assets/1ecacde66766.jpg'}})['Russian Twist'];
+IMG['Cable Side Crunch']=({'Cable Side Crunch':{a:'assets/7c68f46b7ab2.jpg',m:'assets/170c622e8c6e.jpg'}})['Cable Side Crunch'];
+IMG['Cable Kneeling Crunch']=({'Cable Kneeling Crunch':{a:'assets/766bdf3d0b14.jpg',m:'assets/c9de10d52fd1.jpg'}})['Cable Kneeling Crunch'];
+IMG['Hip Thrust']=({'Hip Thrust':{a:'assets/cca345b0acae.jpg',m:'assets/5f1bce48f8f8.jpg'}})['Hip Thrust'];
+IMG['Bulgarian Split Squat']=({'Bulgarian Split Squat':{a:'assets/db35c8114875.jpg',m:'assets/487688fadbdf.jpg'}})['Bulgarian Split Squat'];
+IMG['Front Squat']=({'Front Squat':{a:'assets/dc1b22112cd6.jpg',m:'assets/487688fadbdf.jpg'}})['Front Squat'];
+IMG['Lever Pec Deck Fly']=({'Lever Pec Deck Fly':{a:'assets/2c3c0c324147.jpg',m:'assets/3006c4cfd295.jpg'}})['Lever Pec Deck Fly'];
+IMG['Pull-up']=({'Pull-up':{a:'assets/bd5d4033e6ad.jpg',m:'assets/a0c80d2194ba.jpg'}})['Pull-up'];
+IMG['Dumbbell One Arm Bent over Row']=({'Dumbbell One Arm Bent over Row':{a:'assets/2aa6eb2b0a50.jpg',m:'assets/250adaf42af5.jpg'}})['Dumbbell One Arm Bent over Row'];
+IMG['Cable Seated One Arm Alternate Row']=({'Cable Seated One Arm Alternate Row':{a:'assets/ac4ed32b8b8e.jpg',m:'assets/4a73ecb223a9.jpg'}})['Cable Seated One Arm Alternate Row'];
 IMG['Pec Deck Fly']=IMG['Lever Pec Deck Fly'];IMG['One-Arm Dumbbell Row']=IMG['Dumbbell One Arm Bent over Row'];
-IMG['Leg Curl']=({'Leg Curl':{a:'assets/images/d224eff833cd.jpg',m:'assets/images/faf546145b3d.jpg'}})['Leg Curl'];
-IMG['Leg Extension']=({'Leg Extension':{a:'assets/images/4465481f8ce6.jpg',m:'assets/images/3ad4cba349c5.jpg'}})['Leg Extension'];
-IMG['Skull Crusher']=({'Skull Crusher':{a:'assets/images/434bf86ad380.jpg',m:'assets/images/957fd7c4e308.jpg'}})['Skull Crusher'];
-IMG['Straight-Arm Pulldown']=({'Straight-Arm Pulldown':{a:'assets/images/9b02fcc5a6b7.jpg',m:'assets/images/82cc7ce8dc66.jpg'}})['Straight-Arm Pulldown'];
-IMG['Seated Cable Row']=({'Seated Cable Row':{a:'assets/images/1c2314ae1c9f.jpg',m:'assets/images/5b3cf70e5e79.jpg'}})['Seated Cable Row'];
+IMG['Leg Curl']=({'Leg Curl':{a:'assets/d224eff833cd.jpg',m:'assets/faf546145b3d.jpg'}})['Leg Curl'];
+IMG['Leg Extension']=({'Leg Extension':{a:'assets/4465481f8ce6.jpg',m:'assets/3ad4cba349c5.jpg'}})['Leg Extension'];
+IMG['Skull Crusher']=({'Skull Crusher':{a:'assets/434bf86ad380.jpg',m:'assets/957fd7c4e308.jpg'}})['Skull Crusher'];
+IMG['Straight-Arm Pulldown']=({'Straight-Arm Pulldown':{a:'assets/9b02fcc5a6b7.jpg',m:'assets/82cc7ce8dc66.jpg'}})['Straight-Arm Pulldown'];
+IMG['Seated Cable Row']=({'Seated Cable Row':{a:'assets/1c2314ae1c9f.jpg',m:'assets/5b3cf70e5e79.jpg'}})['Seated Cable Row'];
 IMG['Overhead Press']=IMG['Barbell Seated Overhead Press'];
 IMG['Barbell Row']=IMG['Barbell Bent Over Wide Grip Row'];
 IMG['Squat']=IMG['Barbell Narrow Stance Squat'];
 IMG['Face Pull']=IMG['Cable Lying Face Pull'];
-var MIMG={'Chest':'assets/images/f645d124fcb6.jpg',
-'Biceps':'assets/images/13c87fdf83ae.jpg',
-'Triceps':'assets/images/824f9f1f2691.jpg',
-'Back':'assets/images/79aff793ec82.jpg',
-'Shoulders':'assets/images/e99d781ac1fa.jpg',
-'Abs':'assets/images/7c6b129c7e7e.jpg',
-'Legs':'assets/images/c2317cdfe19d.jpg',
-'Forearms':'assets/images/702fcaf263d2.jpg'};
+var MIMG={'Chest':'assets/f645d124fcb6.jpg',
+'Biceps':'assets/13c87fdf83ae.jpg',
+'Triceps':'assets/824f9f1f2691.jpg',
+'Back':'assets/79aff793ec82.jpg',
+'Shoulders':'assets/e99d781ac1fa.jpg',
+'Abs':'assets/7c6b129c7e7e.jpg',
+'Legs':'assets/c2317cdfe19d.jpg',
+'Forearms':'assets/702fcaf263d2.jpg'};
 var EQS=['Barbell', 'Dumbbell', 'Cable', 'Machine', 'EZ bar', 'Plate', 'Bodyweight'];
-var EQIMG={'Barbell':'assets/images/92da42aed7ef.jpg',
-'Dumbbell':'assets/images/438eabb556b4.jpg',
-'Cable':'assets/images/058a0c109fdd.jpg',
-'Machine':'assets/images/16115a8880ea.jpg',
-'EZ bar':'assets/images/c4d84c4bb46e.jpg',
-'Plate':'assets/images/be09b5d6437b.jpg',
-'Bodyweight':'assets/images/29e2bf18d3ae.jpg'};
+var EQIMG={'Barbell':'assets/92da42aed7ef.jpg',
+'Dumbbell':'assets/438eabb556b4.jpg',
+'Cable':'assets/058a0c109fdd.jpg',
+'Machine':'assets/16115a8880ea.jpg',
+'EZ bar':'assets/c4d84c4bb46e.jpg',
+'Plate':'assets/be09b5d6437b.jpg',
+'Bodyweight':'assets/29e2bf18d3ae.jpg'};
 function exerciseByName(name){return LIB.concat(S&&S.customExercises||[]).filter(function(ex){return ex.n===name})[0]||null}
 function isFavorite(name){return !!(S&&S.favorites&&S.favorites.indexOf(name)>=0)}
 function libraryMuscles(){
