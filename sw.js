@@ -1,4 +1,4 @@
-var CACHE_NAME='setcount-shell-v1';
+var CACHE_NAME='forge-shell-v1';
 var SHELL_FILES=['index.html','manifest.webmanifest','css/style.css','js/app.js','js/pwa.js','assets/favicon.svg'];
 
 self.addEventListener('install',function(event){
@@ -9,7 +9,7 @@ self.addEventListener('install',function(event){
 
 self.addEventListener('activate',function(event){
   event.waitUntil(caches.keys().then(function(names){
-    return Promise.all(names.filter(function(name){return name.indexOf('setcount-')===0&&name!==CACHE_NAME}).map(function(name){return caches.delete(name)}));
+    return Promise.all(names.filter(function(name){return (name.indexOf('setcount-')===0||name.indexOf('forge-')===0)&&name!==CACHE_NAME}).map(function(name){return caches.delete(name)}));
   }).then(function(){return self.clients.claim()}));
 });
 
