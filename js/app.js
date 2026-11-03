@@ -329,6 +329,9 @@ function save(){
 }
 if(S.waterDay!==dk(new Date())){S.water=0;S.waterDay=dk(new Date())}
 
+var SBKEY='forge-sidebar';
+var sbCollapsed=false;try{sbCollapsed=localStorage.getItem(SBKEY)==='1'}catch(e){}
+document.documentElement.classList.toggle('sb-collapsed',sbCollapsed);
 var detail=null,tab='home',rest=null,confirmReset=false,libTab='splits',libMuscle='All',libEq='All',libFavoritesOnly=false,showCustomForm=false,openSplit='ppl',pendingLoad=null,preview=null,planWeekOffset=0;
 var poseActive=false,poseStream=null,poseLandmarker=null,poseInterval=null,poseStatus='',poseError='',poseOverCount=0,poseCueArmed=true;
 
@@ -864,6 +867,19 @@ function library(){
 }
 
 /* render */
+
+function sidebar(){
+  var t=totals(),left=t.tot-t.done;
+  var items=TABS.map(function(x){
+    var on=tab===x[0]&&!detail,badge=x[0]==='train'&&t.tot>0&&left>0?'<i class="sb-badge num" aria-label="'+left+' sets left">'+left+'</i>':'';
+    return '<button class="sb-item'+(on?' on':'')+'" data-act="tab" data-t="'+x[0]+'" title="'+x[1]+'"'+(on?' aria-current="page"':'')+'>'+ICON[x[2]]+'<span class="sb-label-t">'+x[1]+'</span>'+badge+'</button>';
+  }).join('');
+  var prog=t.tot?t.done/t.tot:0;
+  return '<button class="sb-tog" data-act="sbtoggle" aria-label="'+(sbCollapsed?'Expand':'Collapse')+' sidebar" aria-expanded="'+(!sbCollapsed)+'"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>'+
+  '<div class="sb-head"><div class="sb-logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+BI.flame+'</svg></div><b class="sb-name">Forge Fitness</b></div>'+
+  '<div class="sb-cap sb-label-t">Menu</div><div class="sb-list">'+items+'</div>'+
+  '<button class="sb-foot" data-act="tab" data-t="train" title="Today\'s workout: '+t.done+' of '+t.tot+' sets"><span class="sb-ring">'+ring(prog,40,5,'var(--blue)')+'<span class="num">'+(t.tot?Math.round(prog*100):0)+'</span></span><span class="sb-label-t"><b>Today\'s workout</b><small class="num">'+t.done+' / '+t.tot+' sets</small></span></button>';
+}
 function render(keepScroll){
   var v=document.getElementById('view'),y=window.scrollY,focusKey=null;
   if(keepScroll&&v.contains(document.activeElement)){
@@ -876,6 +892,8 @@ function render(keepScroll){
   document.getElementById('nav').innerHTML=TABS.map(function(t){
     return '<button class="'+(tab===t[0]?'on':'')+'" data-act="tab" data-t="'+t[0]+'" aria-label="'+t[1]+'"'+(tab===t[0]?' aria-current="page"':'')+'>'+ICON[t[2]]+'<span>'+t[1]+'</span></button>';
   }).join('');
+  var sd=document.getElementById('side'),sf=document.activeElement&&sd&&sd.contains(document.activeElement)&&document.activeElement.dataset.t;
+  if(sd){sd.innerHTML=sidebar();if(sf){var nb=sd.querySelector('[data-t="'+sf+'"]');if(nb)nb.focus({preventScroll:true})}}
   if(!keepScroll)window.scrollTo(0,0);else window.scrollTo(0,y);
   syncPoseVideo();
   if(focusKey){
@@ -906,6 +924,7 @@ setInterval(tick,1000);
 
 /* actions */
 var A={
+  sbtoggle:function(){sbCollapsed=!sbCollapsed;document.documentElement.classList.toggle('sb-collapsed',sbCollapsed);try{localStorage.setItem(SBKEY,sbCollapsed?'1':'0')}catch(e){}var b=document.querySelector('.sb-tog');if(b){b.setAttribute('aria-expanded',String(!sbCollapsed));b.setAttribute('aria-label',(sbCollapsed?'Expand':'Collapse')+' sidebar')}},
   detail:function(d){if(poseActive)stopPoseCoach('Camera stopped when opening exercise details.');detail=d.n;render()},
   closedetail:function(){detail=null;render(true)},
   tab:function(d){if(poseActive)stopPoseCoach('Camera stopped when leaving the workout.');detail=null;tab=d.t;confirmReset=false;preview=null;render()},
@@ -984,7 +1003,7 @@ var A={
       var payload={format:'setcount-backup',version:1,exportedAt:new Date().toISOString(),data:S};
       var blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
       var url=URL.createObjectURL(blob),link=document.createElement('a');
-      link.href=url;link.download='setcount-backup-'+dk(new Date())+'.json';
+      link.href=url;link.download='forge-backup-'+dk(new Date())+'.json';
       document.body.appendChild(link);link.click();link.remove();
       setTimeout(function(){URL.revokeObjectURL(url)},1000);
       toast('Backup downloaded · keep the file private');
@@ -1010,7 +1029,7 @@ function restoreBackup(input){
     var payload;
     try{payload=JSON.parse(text)}
     catch(e){toast('This backup file is not valid JSON');return}
-    if(!isRecord(payload)||payload.format!=='setcount-backup'||payload.version!==1){toast('This is not a supported Setcount backup');return}
+    if(!isRecord(payload)||payload.format!=='setcount-backup'||payload.version!==1){toast('This is not a supported Forge Fitness backup');return}
     var restored=normalizeState(payload.data);
     if(!restored){toast('This backup has invalid workout data');return}
     if(!window.confirm('Restore this backup and replace the data saved on this device?'))return;
