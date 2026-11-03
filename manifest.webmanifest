@@ -1,15 +1,15 @@
 {
   "id": "./",
-  "name": "Setcount — Train with intent",
-  "short_name": "Setcount",
+  "name": "Forge Fitness — Train with intent",
+  "short_name": "Forge",
   "description": "A focused workout tracker for sets, strength, and progress.",
   "lang": "en",
   "dir": "auto",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#d7dad8",
-  "theme_color": "#1f56c4",
+  "background_color": "#090d0b",
+  "theme_color": "#090d0b",
   "icons": [
     {
       "src": "assets/favicon.svg",
